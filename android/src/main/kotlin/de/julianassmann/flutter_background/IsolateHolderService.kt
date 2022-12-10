@@ -41,7 +41,6 @@ class IsolateHolderService : Service() {
     }
     
     override fun onDestroy() {
-        cleanupService()
         super.onDestroy()
     }
 
@@ -130,7 +129,5 @@ class IsolateHolderService : Service() {
 
     override fun onTaskRemoved(rootIntent: Intent) {
         super.onTaskRemoved(rootIntent)
-        cleanupService()
-        stopSelf()
     }
 }
